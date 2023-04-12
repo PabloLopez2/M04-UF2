@@ -19,5 +19,13 @@ archivo.write("ola k ase")
 
 archivo.close()
 
+diccionario = {
+	"nombre":"Guillem"
+	"apellido":"Agulló"
+	"lema": "ni oblit ni perdó"
+	"altura":"1.1"
+}
+
+print(diccionaro[2])
 
 

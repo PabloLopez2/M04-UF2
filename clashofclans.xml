@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<characters>
+
+	<character id_character="1">
+		<name>Archer Queen</name>
+		<health>3390</health>
+		<dmg>814</dmg>
+		<lvl>75</lvl>
+	</character>
+	
+	<character id_character="2">
+		<name>Barbarian King</name>
+		<health>10300</health>
+		<dmg>550</dmg>
+		<lvl>75</lvl>
+	</character>
+
+	<character id_character="3">
+		<name>Grand Warden</name>
+		<health>2440</health>
+		<dmg>299</dmg>
+		<lvl>50</lvl>
+	</character>
+
+	<character id_character="4">
+		<name>Royal Champion</name>
+		<health>4100</health>
+		<dmg>555</dmg>
+		<lvl>25</lvl>
+	</character>
+
+</characters>
