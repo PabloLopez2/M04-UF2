@@ -4,29 +4,29 @@
 	<character id_character="1">
 		<name>Archer Queen</name>
 		<health>3390</health>
-		<dmg>814</dmg>
-		<lvl>75</lvl>
+		<damage>814</damage>
+		<level>75</level>
 	</character>
 	
 	<character id_character="2">
 		<name>Barbarian King</name>
 		<health>10300</health>
-		<dmg>550</dmg>
-		<lvl>75</lvl>
+		<damage>550</damage>
+		<level>75</level>
 	</character>
 
 	<character id_character="3">
 		<name>Grand Warden</name>
 		<health>2440</health>
-		<dmg>299</dmg>
-		<lvl>50</lvl>
+		<damage>299</damage>
+		<level>50</level>
 	</character>
 
 	<character id_character="4">
 		<name>Royal Champion</name>
 		<health>4100</health>
-		<dmg>555</dmg>
-		<lvl>25</lvl>
+		<damage>555</damage>
+		<level>25</level>
 	</character>
 
 </characters>
