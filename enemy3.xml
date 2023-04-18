@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enemy>
+    <name>P.E.K.K.A</name>
+    <description>Un enemigo formidable, nunca se ha sabido qué es</description>
+    <health>10</health>
+    <strength>3</strength>
+</enemy>

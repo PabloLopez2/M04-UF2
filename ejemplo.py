@@ -26,6 +26,10 @@ while contador > 0:
 	print(contador)
 	contador -= 1
 
+frutas = ["peras", "cerezas", "manzanas", "melocotones"]
+for fruta in frutas:
+	print(fruta)
+
 teclado = input("Introduce tu nombre: ")
 print("Hola "+teclado+"\nxd")
 #print(int(teclado+7)) Por si pasamos un entero y queremos sumarlo

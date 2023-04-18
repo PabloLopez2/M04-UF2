@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enemy>
+    <name>Bruja</name>
+    <description>Spawnea esqueletos, ten cuidado</description>
+    <health>10</health>
+    <strength>3</strength>
+</enemy>
