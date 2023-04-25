@@ -1,55 +1,65 @@
-import xmltodict
 import random
+import xmltodict
 
-#Cargar los archivos
-#enemy_files = ["enemy1.xml", "enemy2.xml", "enemy3.xml"]
-#enemy_file = random.choice(enemy_files)
+xml_file = open("enemies.xml")
+data = xml_file.read()
+xml_file.close()
 
-with open("enemies.xml", "r") as f:
-    xml_string = f.read()
+enemy_dict = xmltodict.parse(data)
 
-# Conviertir el archivo XML a un diccionario de Python
-enemy_dict = xmltodict.parse(xml_string)
+enemies = enemy_dict['enemies']['enemy']
+current_enemy_index = 0
+enemy = enemies[current_enemy_index]
 
-#Definir valores del archivo XML
-name = enemy_dict["enemy"]["name"]
-description = enemy_dict["enemy"]["description"]
-health = int(enemy_dict["enemy"]["health"])
-strength = int(enemy_dict["enemy"]["strength"])
+#Vida del jugador
+player_health = 1000
 
-#Mi vida
-player_health = 20
+print("INTRODUCCIÓN AL JUEGO: La traición de Pablo ")
 
-#Bucle
+print("\nContexto: Todo comienza un día donde Pablo traiciona a su clase, miente en su beneficio, oculta y roba a sus compañeros en secreto, pero un día fue descubierto, entonces los compañeros decidirán sentenciarlo a muerte y lucharán contra él.")
+
 while True:
-	# Mostrar información del enemigo
-	print(f"\n{name}: {description}")
-	print(f"Health: {health}, Strength: {strength}")
+    #Muestro stats del enemigo
+    print("\nNombre: " + str(enemy['name']))
+    print("Daño: " + enemy['damage'])
+    print("Salud: " + str(enemy['health']))
+    print("Descripción: " + str(enemy['description']))
 
-	#acción
-    action = input("¿Qué quieres hacer? (ataca/nothing)")
+    #Mi vida
+    print("\nTu salud: " + str(player_health))
 
+    action = input("¿Qué quieres hacer? (ataca/nada) ")
+
+    #Pego o no
     if action == "ataca":
-        damage = random.randint(0, 5)
-        health -= damage
-        print(f"Has quitado {damage} puntos de vida al enemigo.")
+        damage = random.randint(0, 40)
+        enemy['health'] = int(enemy['health']) - damage
+        print("Has quitado " + str(damage) + " puntos de vida al enemigo.")
     else:
-        print("Te quedas mirando las musarañas")
+        print("Te quedas mirando las musarañas.")
 
-    #El enemigo me pega o no
-    player_damage = random.randint(0, 2)
-    player_health -= player_damage
-    print(f"El enemigo te ha quitado {player_damage} puntos de vida.")
+    #El enemigo me pega
+    player_damage = int(enemy['damage']) - random.randint(0, 5)
+    player_health = player_health - player_damage
+    print("El enemigo te ha quitado " + str(player_damage) + " puntos de vida.")
 
-	#Saluf enemigo
-    if health <= 0:
-        print("Acabaste con él. ¡Felicidades!")
-        break
-    
-	#Mi salud
+    #Si acabamos con el enemigo
+    if int(enemy['health']) <= 0:
+        print("Has derrotado al enemigo. ¡Felicidades!")
+        #Seleccionar el siguiente enemigo del archivo XML
+        current_enemy_index += 1
+        if current_enemy_index >= len(enemies):
+            #Te pasas el juego
+            print("¡Has completado el juego!")
+            break
+        else:
+            enemy = enemies[current_enemy_index]
+    #Game over
     if player_health <= 0:
-        print("Mala suerte papu, has perdido.")
+        print("Has perdido papu")
         break
+
+
 
 
 #print(diccionario)

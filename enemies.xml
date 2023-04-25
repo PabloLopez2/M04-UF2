@@ -4,30 +4,40 @@
 		<name>Lluc</name>
 		<damage>9</damage>
 		<health>25</health>
+		<description>Pablo, Pablo, Pablo. No quería llegar a este punto pero nuestros caminos de dividen. Hip hip (yo digo hurra) PUES AGARRAME LA CHURRA pringao. </description>
 	</enemy>
 	<enemy>
 		<name>Guillem</name>
 		<damage>15</damage>
 		<health>20</health>
+		<description>Aviam, Pablo, penses que podràs amb aquest robust cos que tinc? ja saps com deia Miquel: Sóc fort com una bèstia, no hi ha res que em pugui fer la festa. No em faràs ni pesigolles.</description>
 	</enemy>
 	<enemy>
 		<name>John</name>
 		<damage>30</damage>
 		<health>50</health>
+		<description>Pablo, sabes que soy traquilo, pero si tengo que luchar, no me contendré. Te aviso que pego muy fuerte.</description>
 	</enemy>
 	<enemy>
 		<name>Inogue</name>
 		<damage>12</damage>
 		<health>23</health>
+		<description>Joder Pablo, ¿de verdad tengo que luchar contra ti? Que palo, venga acabemos rápido que tengo cosas más importantes que hacer. Como por ejemplo jugar al buscaminas.</description>
+	</enemy>
+	<enemy>
+		<name>Adri</name>
+		<damage>15</damage>
+		<health>35</health>
+		<description>Probablemente no me has visto enfadado Pablo, pero esta vez te has pasado, nadie se mete con los nuestros, la tración se condena con la muerte.</description>
 	</enemy>
 	<enemy>
 		<name>1vs4: Toni/Marti/Erik/Marcel</name>
 		<damage>70</damage>
 		<health>100</health>
-	</enemy>
-	<enemy>
-		<name>adri</name>
-		<damage>15</damage>
-		<health>35</health>
+		<description>La SQUAD fila de alante (JEFE FINAL). 
+		Toni: QUE PASAAAA Pablou, aligual puedes conmigo, te saco 1 cabeza. 
+		Martí: Como pudiste hacernos esto Pablo, me caías bien, pero no nos dejas opción.  
+		Erik: Pablo, preparate porque te voy a descuartizar (saca el cuter). 
+		Marcel: Que onda papu, te voy a matar (se cruje los dedos)</description>
 	</enemy>
 </enemies>
