@@ -19,48 +19,45 @@ print("INTRODUCCIÓN AL JUEGO: La traición de Pablo ")
 print("\nContexto: Todo comienza un día donde Pablo traiciona a su clase, miente en su beneficio, oculta y roba a sus compañeros en secreto, pero un día fue descubierto, entonces los compañeros decidirán sentenciarlo a muerte y lucharán contra él.")
 
 while True:
-    #Muestro stats del enemigo
-    print("\nNombre: " + str(enemy['name']))
-    print("Daño: " + enemy['damage'])
-    print("Salud: " + str(enemy['health']))
-    print("Descripción: " + str(enemy['description']))
+	#Muestro stats del enemigo
+	print("\nNombre: " + str(enemy['name']))
+	print("Daño: " + enemy['damage'])
+	print("Salud: " + str(enemy['health']))
+	print("Descripción: " + str(enemy['description']))
 
-    #Mi vida
-    print("\nTu salud: " + str(player_health))
+	#Mi vida
+	print("\nTu salud: " + str(player_health))
 
-    action = input("¿Qué quieres hacer? (ataca/nada) ")
+	action = input("¿Qué quieres hacer? (ataca/nada) ")
 
-    #Pego o no
-    if action == "ataca":
-        damage = random.randint(0, 40)
-        enemy['health'] = int(enemy['health']) - damage
-        print("Has quitado " + str(damage) + " puntos de vida al enemigo.")
-    else:
-        print("Te quedas mirando las musarañas.")
+	#Pego o no
+	if action == "ataca":
+		damage = random.randint(0, 40)
+		enemy['health'] = int(enemy['health']) - damage
+		print("Has quitado " + str(damage) + " puntos de vida al enemigo.")
+	else:
+		print("Te quedas mirando las musarañas.")
 
-    #El enemigo me pega
-    player_damage = int(enemy['damage']) - random.randint(0, 5)
-    player_health = player_health - player_damage
-    print("El enemigo te ha quitado " + str(player_damage) + " puntos de vida.")
+	#El enemigo me pega
+	player_damage = int(enemy['damage']) - random.randint(0, 5)
+	player_health = player_health - player_damage
+	print("El enemigo te ha quitado " + str(player_damage) + " puntos de vida.")
 
-    #Si acabamos con el enemigo
-    if int(enemy['health']) <= 0:
-        print("Has derrotado al enemigo. ¡Felicidades!")
-        #Seleccionar el siguiente enemigo del archivo XML
-        current_enemy_index += 1
-        if current_enemy_index >= len(enemies):
-            #Te pasas el juego
-            print("¡Has completado el juego!")
-            break
-        else:
-            enemy = enemies[current_enemy_index]
-    #Game over
-    if player_health <= 0:
-        print("Has perdido papu")
-        break
-
-
-
+	#Si acabamos con el enemigo
+	if int(enemy['health']) <= 0:
+		print("Has derrotado al enemigo. ¡Felicidades!")
+		#Seleccionar el siguiente enemigo del archivo XML
+		current_enemy_index += 1
+		if current_enemy_index >= len(enemies):
+			#Te pasas el juego
+			print("¡Has completado el juego! Enhorabuena por demostrar que la justícia no siempre gana.")
+			break
+		else:
+			enemy = enemies[current_enemy_index]
+	#Game over
+	if player_health <= 0:
+		print("Has perdido papu")
+		break
 
 #print(diccionario)
 
