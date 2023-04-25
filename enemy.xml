@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enemy>
+	<name>Archer</name>
+	<damage>15</damage>
+	<health>30</health>
+</enemy>

@@ -2,10 +2,10 @@ import xmltodict
 import random
 
 #Cargar los archivos
-enemy_files = ["enemy1.xml", "enemy2.xml", "enemy3.xml"]
-enemy_file = random.choice(enemy_files)
+#enemy_files = ["enemy1.xml", "enemy2.xml", "enemy3.xml"]
+#enemy_file = random.choice(enemy_files)
 
-with open(enemy_file, "r") as f:
+with open("enemies.xml", "r") as f:
     xml_string = f.read()
 
 # Conviertir el archivo XML a un diccionario de Python
@@ -22,11 +22,11 @@ player_health = 20
 
 #Bucle
 while True:
-    # Mostrar información del enemigo
-    print(f"\n{name}: {description}")
-    print(f"Health: {health}, Strength: {strength}")
+	# Mostrar información del enemigo
+	print(f"\n{name}: {description}")
+	print(f"Health: {health}, Strength: {strength}")
 
-    #acción
+	#acción
     action = input("¿Qué quieres hacer? (ataca/nothing)")
 
     if action == "ataca":

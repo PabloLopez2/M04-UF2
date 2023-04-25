@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enemies>
+	<enemy>
+		<name>Lluc</name>
+		<damage>9</damage>
+		<health>25</health>
+	</enemy>
+	<enemy>
+		<name>Guillem</name>
+		<damage>15</damage>
+		<health>20</health>
+	</enemy>
+	<enemy>
+		<name>John</name>
+		<damage>30</damage>
+		<health>50</health>
+	</enemy>
+	<enemy>
+		<name>Inogue</name>
+		<damage>12</damage>
+		<health>23</health>
+	</enemy>
+	<enemy>
+		<name>1vs4: Toni/Marti/Erik/Marcel</name>
+		<damage>70</damage>
+		<health>100</health>
+	</enemy>
+	<enemy>
+		<name>adri</name>
+		<damage>15</damage>
+		<health>35</health>
+	</enemy>
+</enemies>
