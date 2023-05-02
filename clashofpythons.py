@@ -18,9 +18,9 @@ player_experience = 0
 player_level = 1
 potion_count = 2
 
-print("INTRODUCCIÓN AL JUEGO: La traición de X ")
+print("INTRODUCCIÓN AL JUEGO: La traición de Pablo ")
 
-print("\nContexto: Todo comienza un día donde X traiciona a su clase, miente en su beneficio, oculta y roba a sus compañeros en secreto, pero un día fue descubierto, entonces los compañeros decidirán sentenciarlo a muerte y lucharán contra él.")
+print("\nContexto: Todo comienza un día donde Pablo traiciona a su clase, miente en su beneficio, oculta y roba a sus compañeros en secreto, pero un día fue descubierto, entonces los compañeros decidirán sentenciarlo a muerte y lucharán contra él.")
 
 while True:
 	#Muestro stats del enemigo
@@ -34,7 +34,7 @@ while True:
 	print("Tu nivel maribel: " + str(player_level))
 	print("Tu experiencia: " + str(player_experience))
 	
-	action = input("¿Qué quieres hacer? (ataca/nada/utilizar poción) ")
+	action = input("¿Qué quieres hacer? (ataca/nada/poción) ")
 
 	# Pego o no
 	if action == "ataca":
