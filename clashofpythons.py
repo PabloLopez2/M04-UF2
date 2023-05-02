@@ -41,7 +41,8 @@ while True:
 		damage = random.randint(0, 40)
 		enemy['health'] = int(enemy['health']) - damage
 		print("Has quitado " + str(damage) + " puntos de vida al enemigo.")
-			
+	
+	#Utilizas el objeto poción
 	elif action == "pocion":
 		if potion_count > 0:
 			player_health += 50
