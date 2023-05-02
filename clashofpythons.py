@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
+import sys
+sys.stdout.encoding = "utf-8"
 import random
 import xmltodict
 
-xml_file = open("enemies.xml")
+xml_file = open("Documents/M04-UF2/enemies.xml")
 data = xml_file.read()
 xml_file.close()
 
@@ -13,8 +14,11 @@ enemies = enemy_dict['enemies']['enemy']
 current_enemy_index = 0
 enemy = enemies[current_enemy_index]
 
-#Vida del jugador
+#Vida del jugador, experiencia, nivel y poción
 player_health = 1000
+player_experience = 0
+player_level = 1
+potion_count = 2
 
 print("INTRODUCCIÓN AL JUEGO: La traición de Pablo ")
 
@@ -23,20 +27,33 @@ print("\nContexto: Todo comienza un día donde Pablo traiciona a su clase, mient
 while True:
 	#Muestro stats del enemigo
 	print("\nNombre: " + str(enemy['name']))
-	print("Daño: " + enemy['damage'])
+	print("Daño: " + str(enemy['damage']))
 	print("Salud: " + str(enemy['health']))
 	print("Descripción: " + str(enemy['description']))
 
-	#Mi vida
+	#Mi vida, nivel y experiencia
 	print("\nTu salud: " + str(player_health))
+	print("Tu nivel maribel: " + str(player_level))
+	print("Tu experiencia: " + str(player_experience))
+	
+	action = input("¿Qué quieres hacer? (ataca/nada/utilizar poción) ")
 
-	action = input("¿Qué quieres hacer? (ataca/nada) ")
-
-	#Pego o no
+	# Pego o no
 	if action == "ataca":
 		damage = random.randint(0, 40)
 		enemy['health'] = int(enemy['health']) - damage
 		print("Has quitado " + str(damage) + " puntos de vida al enemigo.")
+			
+	elif action == "pocion":
+		if potion_count > 0:
+			player_health += 50
+			if player_health > 1000:
+				player_health = 1000
+			potion_count -= 1
+			print("Has usado una poción. Te sube 50 de vida. Tu salud actual es de " + str(player_health) + ". Te quedan " + str(potion_count) + " pociones.")
+		else:
+			print("No tienes pociones disponibles.")
+		
 	else:
 		print("Te quedas mirando las musarañas.")
 
@@ -47,6 +64,10 @@ while True:
 
 	#Si acabamos con el enemigo
 	if int(enemy['health']) <= 0:
+		#Gano experiencia y subo de nivel
+		player_experience += 50
+		player_level = int(player_experience / 100) + 1
+
 		print("Has derrotado al enemigo. ¡Felicidades!")
 		#Seleccionar el siguiente enemigo del archivo XML
 		current_enemy_index += 1
@@ -56,6 +77,10 @@ while True:
 			break
 		else:
 			enemy = enemies[current_enemy_index]
+			enemy['damage'] = int(enemy['damage']) + (player_level - 1) * 10
+			enemy['health'] = int(enemy['health']) + (player_level - 1) * 50
+			print("El enemigo ha subido de fuerza.")
+
 	#Game over
 	if player_health <= 0:
 		print("Has perdido papu")
