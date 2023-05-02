@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-import sys
-sys.stdout.encoding = "utf-8"
 import random
 import xmltodict
 
-xml_file = open("Documents/M04-UF2/enemies.xml")
+xml_file = open("enemies.xml")
 data = xml_file.read()
 xml_file.close()
 
@@ -20,9 +18,9 @@ player_experience = 0
 player_level = 1
 potion_count = 2
 
-print("INTRODUCCIÓN AL JUEGO: La traición de Pablo ")
+print("INTRODUCCIÓN AL JUEGO: La traición de X ")
 
-print("\nContexto: Todo comienza un día donde Pablo traiciona a su clase, miente en su beneficio, oculta y roba a sus compañeros en secreto, pero un día fue descubierto, entonces los compañeros decidirán sentenciarlo a muerte y lucharán contra él.")
+print("\nContexto: Todo comienza un día donde X traiciona a su clase, miente en su beneficio, oculta y roba a sus compañeros en secreto, pero un día fue descubierto, entonces los compañeros decidirán sentenciarlo a muerte y lucharán contra él.")
 
 while True:
 	#Muestro stats del enemigo

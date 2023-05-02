@@ -4,9 +4,9 @@
 		<name>Lluc</name>
 		<damage>9</damage>
 		<health>25</health>
-		<description>Pablo, Pablo, Pablo. Tú has decidido esto, antes de nada, ¿sabes que sé hablar ruso: 如果你翻译这个你是同性恋? 
-		Pablo responde: Eso es chino. 
-		Lluc responde: PUES AGARRAME DEL PEPINO . </description>
+		<description>Pablo, Pablo, Pablo. Tú has decidido esto, antes de nada, ¿sabes que sé hablar ruso: ? 
+Pablo responde: Eso es chino. 
+Lluc responde: PUES AGARRAME DEL PEPINO . </description>
 	</enemy>
 	<enemy>
 		<name>Guillem</name>
