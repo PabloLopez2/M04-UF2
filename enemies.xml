@@ -24,20 +24,20 @@ Lluc responde: PUES AGARRAME DEL PEPINO. </description>
 		<name>Inogue</name>
 		<damage>12</damage>
 		<health>23</health>
-		<description>Hermano, bro, Pablo, ¿de verdad tengo que luchar contra ti? Que palo, venga acabemos rápido que tengo cosas más importantes que hacer. Como por ejemplo jugar al buscaminas o el solitario.</description>
+		<description>Hermano, bro, escuchame Pablo, estoy en medio de una partida del solitario, como me levante te voy a enganchar bien enganchao.</description>
 	</enemy>
 	<enemy>
 		<name>Adri</name>
 		<damage>15</damage>
 		<health>35</health>
-		<description> Pablo, esta vez te has pasado, nadie se mete con los nuestros, la tración se condena con la muerte. En nadie yo confío. </description>
+		<description> Pablo, ¿quién te crees? (mientras sostiene el cigarro en la mano), nadie se mete con los nuestros, la tración se condena con la muerte. En nadie yo confío. </description>
 	</enemy>
 	<enemy>
 		<name>1vs4: Toni/Marti/Erik/Marcel</name>
 		<damage>70</damage>
 		<health>100</health>
 		<description>La SQUAD fila de alante (JEFE FINAL). 
-		Toni: QUE PASAAAA Pablou, a donde ibas pinguinaco, aligual puedes conmigo, te saco 1 cabeza. 
+		Toni: QUE PASAAAA Pablouuu, a donde ibas pinguinaco, aligual puedes conmigo, te saco 1 cabeza. 
 		Martí: Oye Pablo, puede que sea sordo y me parezca al masao, pero no soy tonto, fui yo quien se chivó a los demás de tu traición. El que traiciona es el que dice que es el más leal haha.  
 		Erik: Pablo, me iba a echar un cigarrito pero preparate porque te voy a descuartizar (saca el cuter). 
 		Marcel: Que onda papu. ¿Te acuerdas que un día te dije que te iba matar? Pues ese día es hoy.(se cruje los dedos)</description>

@@ -38,25 +38,37 @@ class Player:
 	def set_level (self, level):
 		self.level = level
 
-	def get_level(self, xp):
+
+	def get_level (self, xp = -1):
+		if xp == -1:
+			return self.level
+
 		level_cur = self.level
 
 		for level in self.levels:
 			if self.levels[level] <= xp:
 				level_cur = level
+				
+		return level_cur
 
-			return level_cur
 
 	def set_xp (self, xp):
 		self.xp = xp
-	
-	def hurt (self):
+
 
 	def attack (self):
+		return random.randint(0, self.strength)
+
+
+	def hurt (self, damage):
+		self.health -= damage
+
+		if self.health > 0:
+			return False
+		
+		return True
+
 	
-
-
-
 	def show_info (self):
 		print("Name: "+self.name)
 		print("Health: "+str(self.health))
@@ -64,12 +76,11 @@ class Player:
 		print("Level: "+str(self.level))
 		print("XP: "+str(self.xp))
 
-		
-		
-		
-		
+	
 	
 if __name__ == "__main__":
 	player = Player("Juan Ramón")
+
+	print(player.get_level(66))
 
 

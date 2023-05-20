@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game>
+	<current_enemy_index>2</current_enemy_index>
+	<enemy_health>74</enemy_health>
+	<player_health>1378</player_health>
+	<player_experience>100</player_experience>
+	<player_level>2</player_level>
+	<potion_count>2</potion_count>
+</game>
