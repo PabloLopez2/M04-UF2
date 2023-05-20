@@ -13,7 +13,7 @@ current_enemy_index = 0
 enemy = enemies[current_enemy_index]
 
 #Vida del jugador, experiencia, nivel y poción
-player_health = 1000
+player_health = 1500
 player_experience = 0
 player_level = 1
 potion_count = 2
@@ -81,7 +81,7 @@ while True:
 
 	#Game over
 	if player_health <= 0:
-		print("Has perdido papu")
+		print("Has perdido papu, fin de la partida. No hay checkpoints así que no te queda otra que empezar desde 0.")
 		break
 
 #print(diccionario)
